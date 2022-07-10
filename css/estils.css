@@ -1,0 +1,462 @@
+/* Importar fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat&display=swap');
+/* Efecte flash per les fotos: */
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Fer reset : */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Millorar l'escroll: */
+html {
+    scroll-behavior: smooth;
+}
+/* Clase para hacer elemento sólo visible a los lectores de pantalla: */
+.sronly {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+/*Imatges millorades:*/
+main img {
+    max-width: 100%;
+    height: auto;
+}
+/* Parts generals del cos : */
+body {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    background-color: rgb(245,246,240);
+    color: rgb(2,15,20);
+    line-height: 1.6;
+    background: linear-gradient(to right,rgb(199, 184, 255),rgb(185, 200, 248),rgb(185, 200, 248), rgb(185, 200, 248), rgb(199, 184, 255));
+}
+h1, h2, p {
+    text-align: center;
+}
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+/* Versió móvil - tablet: */
+@media (max-width: 767px) {
+    .container {
+      max-width: 720px;
+    }
+    h1 {
+        padding: 15px 30px 250px 30px;
+        font-weight: 900;
+        font-size: 1.4em;
+        line-height: 1.5;
+        margin-bottom: 1.5em;
+    }
+    h2 {
+        font-weight: 600;
+        font-size: 1.2em;
+        line-height: 1.2em;
+        margin-top: 3em;
+        margin-bottom: 1.5em;
+    }
+    section:nth-child(3) h2 + p:first-of-type {
+        font-size: 0.8em;
+        padding: 0 5px 0 5px
+    }
+    .login {
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgb(0, 164, 252);
+        color: rgb(255,255,255);
+        padding: 5px 45px; 
+        border-radius: 3px;
+    }
+    .headerFlex {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header div:nth-child(3) {
+        display: inline-block;
+        font-size: 0.7em;
+        justify-content: space-between;
+        order: -1
+    }
+    header a:hover {
+        font-weight: 900 ;
+        color: #000;
+    }
+    .footerFlex {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footerFlex address {
+        font-size: 0.7rem;
+        list-style-type: none;
+        line-height: 1.2em;
+        margin-bottom: 15px;
+    }
+    .footerFlex ul:last-child li{
+        display: inline-block;
+    }
+    .footerFlex :hover {
+        font-weight: bolder ;
+        color: #000;
+    }   
+    .footerFlex2 ul {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footerFlex2 li {
+        padding: 0px 6px 5px 6px ;
+        font-size: 0.7rem;
+        display: inline-block;
+    }
+    .footerFlex2 :hover {
+        font-weight: bolder ;
+        color: #000;
+    }   
+    .footerFlex3 {
+        padding-top: 15px;
+    }
+    .footerFlex3 p {
+        font-size: 0.5em;
+        line-height: 0px;
+    }
+    .footerFlex3 a:hover {
+        font-weight: bolder ;
+        color: #000;
+    }   
+    i {
+        color: black;
+        font-size: 2rem;
+        padding-left: 2px;
+    }
+    .mainFlex {
+        background-image:
+        url(../img/bcn-skyline.jpg);
+        background-repeat: no-repeat;
+        background-size: 300vw 120vw;
+        background-position: center;
+    }
+    .mainFlex p {
+        font-weight: 800;
+        font-size: 3rem;
+        color: white;
+        padding-bottom: 15px
+    }
+    .mainFlex:hover{
+        filter: saturate(8);
+    }
+    .gridContainer2 img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gridContainer2 img:hover {
+        opacity: 1;
+        -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+    }
+    .gridContainer3 img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gridContainer3 img:hover {
+        opacity: 1;
+        -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+    }
+    .Scroll {
+        display: none
+    }
+}
+
+/* Versió PC: */
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+    h1 {
+        padding: 15px 30px 250px 30px;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-weight: 500;
+        font-size: 2.2rem;
+        line-height: 1.5;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .login {
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgb(0, 164, 252);
+        color: rgb(255,255,255);
+        padding: 5px 35px; 
+        border-radius: 3px;
+    }
+    .headerFlex {
+        display: flex;
+        padding: 5px 15px 0px 15px;
+        justify-content: space-between;
+    }
+    header nav ul {
+        text-align:center;
+        justify-content: space-between;
+    }
+    header nav li {
+        display: inline-block;
+        font-size: 0.8em;
+        justify-content: space-between;
+        padding: 15px 30px 30px 15px ;
+    }
+    header a:hover {
+        font-weight: 900 ;
+        color: #000;
+    }   
+    .footerFlex {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px 5px 15px ;    
+    }   
+    .footerFlex address, li {
+        font-size: 0.7rem;
+        list-style-type: none;
+    }
+    .footerFlex ul:last-child li{
+        display: inline-block;
+    }
+    .footerFlex :hover {
+        font-weight: bolder ;
+        color: #000;
+    }   
+    .footerFlex2 ul {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footerFlex2 li {
+        padding: 0px 30px 5px 15px ;
+        font-size: 0.7rem;
+        display: inline-block;
+    }
+    .footerFlex2 :hover {
+        font-weight: bolder ;
+        color: #000;
+    }   
+    .footerFlex3 {
+        display: inline;
+    }
+    .footerFlex3 p {
+        font-size: 0.7rem;
+        padding: 0;
+        margin: 0;
+    }
+    .footerFlex3 p:first-child, p:nth-child(2) {
+        text-align: left;
+        margin-left: 15px;
+    }
+    .footerFlex3 p:last-child {
+        text-align: right;
+        margin-right: 15px;
+        margin-top: -20px;
+    }
+    .footerFlex3 a:hover {
+        font-weight: bolder ;
+        color: #000;
+    }   
+    i {
+        color: black;
+        font-size: 2.5rem;
+        padding-left: 2px;
+    }
+    .mainFlex {
+        background-image:
+        url(../img/bcn-skyline.jpg);
+        background-repeat: no-repeat;
+        background-size: 190vw 60vw;
+        background-position: center;
+    }
+    .mainFlex p {
+        font-weight: 3rem;
+        font-size: 3rem;
+        color: white;
+    }
+    .mainFlex:hover{
+        filter: saturate(8);
+    }
+    .mainFlex:hover p{
+        color: white;
+        font-size: 3rem;
+    }
+    .gridContainer2 {
+        display: grid ;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        padding: 10px 0px 10px 0px;
+        gap: 0;
+    }
+    .gridContainer2 img:hover {
+        opacity: 1;
+        -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+    }
+    .gridContainer2 :nth-child(1){
+        grid-column: 1;
+    }
+    .gridContainer2 :nth-child(2){
+        grid-column: 2;
+    }
+    .gridContainer2 :nth-child(3){
+        grid-column: 3;
+    }
+    .gridContainer3 {
+        display: grid ;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        padding: 10px 0px 10px 0px;
+        gap: 0;
+    }
+    .gridContainer3 img:hover {
+        opacity: 1;
+        -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+    }
+    .gridContainer3 :nth-child(1){
+        grid-column: 1;
+    }
+    .gridContainer3 :nth-child(2){
+        grid-column: 2;
+    }
+    .gridContainer3 :nth-child(3){
+        grid-column: 3;
+    }
+    .Scroll {
+        margin-right: 1%;
+        text-align: right;
+    }
+}
+/* Versió pantalles grans:   */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+    h1 {
+        padding: 15px 30px 250px 30px;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 1.5;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .mainFlex {
+        background-image:
+        url(../img/bcn-skyline.jpg);
+        background-repeat: no-repeat;
+        background-size: 120vw 35vw;
+        background-position: center;
+    }
+    .gridContainer2 {
+        display: grid ;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        padding: 10px 0px 10px 0px;
+        gap: 0;
+    }
+    .gridContainer2 img:hover {
+        opacity: 1;
+        -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+    }
+    .gridContainer2 :nth-child(1){
+        grid-column: 1;
+    }
+    .gridContainer2 :nth-child(2){
+        grid-column: 2;
+    }
+    .gridContainer2 :nth-child(3){
+        grid-column: 3;
+    }
+    .gridContainer3 {
+        display: grid ;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        padding: 10px 0px 10px 0px;
+        gap: 0;
+    }
+    .gridContainer3 img:hover {
+        opacity: 1;
+        -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+    }
+    .gridContainer3 :nth-child(1){
+        grid-column: 1;
+    }
+    .gridContainer3 :nth-child(2){
+        grid-column: 2;
+    }
+    .gridContainer3 :nth-child(3){
+        grid-column: 3;
+    }
+    .Scroll {
+        margin-right: 1%;
+        text-align: right;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+      width: auto;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+      width: auto;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+      max-width: 1320px;
+      width: auto;
+    }
+}
